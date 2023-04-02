@@ -1,0 +1,24 @@
+package org.dog.spring.api.model;
+
+public enum PersonalitiesDog {
+    ENERGY,
+    CAREFUL,
+    CALM,
+    UN_SMARTY,
+    STRONG,
+    FEARFUL,
+    DO_NOT_LIKE_CHILDREN,
+    LOVING_CHILDREN,
+    ADORABLE,
+    ACCEPTING_OTHER_ANIMALS,
+    DISTRUSTFUL_OF_STRANGERS,
+    POSITIVE,
+    UPDATED,
+    AGGRESSIVE_TO_DOGS,
+    RECEIVED,
+    LOVING,
+    SMART,
+    INTELLIGENT,
+    WISE,
+    LEARNS_QUICKLY
+}
