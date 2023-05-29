@@ -1,5 +1,6 @@
 package org.dog.spring.api.model;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
@@ -51,7 +52,9 @@ public class Animal {
 
     @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
     @JoinColumn(name = "animal_id")
-    private List<Images> images;
+
+    @JsonManagedReference
+    private List<Image> animalImages;
 
     private Date birthDate;
 
@@ -61,7 +64,7 @@ public class Animal {
 
     public Animal(String identifierTag, String name, Sex sex, Date dateRegistration,
                   SizeOfAnimal size, boolean castration, boolean vax, boolean chip,
-                  String description, List<Images> images, Date birthDate) {
+                  String description, List<Image> animalImages, Date birthDate) {
 
         super();
         this.identifierTag = identifierTag;
@@ -73,7 +76,7 @@ public class Animal {
         this.vax = vax;
         this.chip = chip;
         this.description = description;
-        this.images = images;
+        this.animalImages = animalImages;
         this.birthDate = birthDate;
     }
 
@@ -157,12 +160,12 @@ public class Animal {
         this.description = description;
     }
 
-    public List<Images> getImages() {
-       return images;
+    public List<Image> getImages() {
+       return animalImages;
    }
 
-   public void setImages(List<Images> images) {
-        this.images = images;
+   public void setImages(List<Image> images) {
+        this.animalImages = animalImages;
     }
 
     public Date getBirthDate() {

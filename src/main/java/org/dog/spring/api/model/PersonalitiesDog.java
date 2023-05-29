@@ -13,7 +13,6 @@ public enum PersonalitiesDog {
     ACCEPTING_OTHER_ANIMALS,
     DISTRUSTFUL_OF_STRANGERS,
     POSITIVE,
-    UPDATED,
     AGGRESSIVE_TO_DOGS,
     RECEIVED,
     LOVING,
